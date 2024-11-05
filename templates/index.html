@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beans Sold Prediction</title>
+</head>
+<body>
+    <h1>Beans Sold Prediction</h1>
+    <form method="POST" action="/">
+        <label for="month">Enter Month (YYYY-MM):</label>
+        <input type="text" id="month" name="month" placeholder="2024-01" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is not none %}
+        <h2>Predicted Beans Sold: {{ prediction | round(2) }}</h2>
+    {% endif %}
+</body>
+</html>
